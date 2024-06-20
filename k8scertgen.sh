@@ -205,8 +205,6 @@ retrieve_secrets() {
     printf "%s" "$tls_key" > "${output_dir}/tls.key"
     printf "%s" "$tls_crt" > "${output_dir}/tls.crt"
     printf "%s" "$ca_crt" > "${output_dir}/ca.crt"
-
-    kubectl delete secrets "$secret_name" -n "$secret_namespace"
 }
 
 # Main function
